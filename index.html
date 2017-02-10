@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aula vídeo</title>
+</head>
+<body>
+
+    <!-- HTML5 tag video -->
+    <video id="video" width="420" height="375" controls>
+      <source src="videos/video_mp4_player.mp4" type="video/mp4" />
+      <source src="videos/video_ogg_player.ogv" type="video/ogv">
+      <source src="videos/video_webm_player.webm" type="video/webm">
+    </video>
+
+    <!-- control buttons -->
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+
+    <!-- js -->
+    <script>
+
+      // declare variable
+      var myVideo = document.querySelector("#video");
+
+      // function commands
+      function playPause(){
+        if(myVideo.paused)
+          myVideo.play();
+        else
+          myVideo.pause();
+      }
+
+      function makeBig(){
+        myVideo.width = 550;
+      }
+
+      function makeSmall(){
+        myVideo.width = 320;
+      }
+
+      function makeNormal(){
+        myVideo.width = 420;
+      }
+
+    </script>
+
+
+</body>
+</html>
